@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Customer Feedback Survey</h1>
+            <p>We value your opinion! Please take a moment to fill out this survey.</p>
+        </header>
+
+        <main>
+            <form id="survey-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="18" max="120" placeholder="Age">
+                </div>
+
+                <div class="form-group">
+                    <label>How did you hear about us?</label>
+                    <select id="source" name="source">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="social-media">Social Media</option>
+                        <option value="friend">Friend/Family</option>
+                        <option value="advertisement">Advertisement</option>
+                        <option value="search">Search Engine</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>How satisfied are you with our service?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="satisfaction" value="very-satisfied"> Very Satisfied
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="satisfaction" value="satisfied"> Satisfied
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="satisfaction" value="neutral"> Neutral
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="satisfaction" value="dissatisfied"> Dissatisfied
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="satisfaction" value="very-dissatisfied"> Very Dissatisfied
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Which features do you like? (Check all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="user-interface"> User Interface
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="performance"> Performance
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="customer-support"> Customer Support
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="pricing"> Pricing
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Please share any additional feedback..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="submit">Submit Survey</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Ken Ekweme | <a href="https://www.oteksolutions.net" target="_blank">OTek Solutions</a></p>
+        </footer>
+    </div>
+    
+    
+</body>
+</html>
