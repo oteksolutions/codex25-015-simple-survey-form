@@ -1,4 +1,4 @@
-# codex25-015-survey-form
+# codex25-015-simple-survey-form
 
 <p><strong>PROJECT OVERVIEW</strong></p>
 This project is a Simple Survey Form built using HTML and CSS. It provides a clean and user-friendly interface for collecting responses, focusing on accessibility and responsive design. The form includes various input types to ensure a structured and intuitive experience.
