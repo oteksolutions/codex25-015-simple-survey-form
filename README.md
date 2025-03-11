@@ -23,3 +23,7 @@ This project is a Simple Survey Form built using HTML and CSS. It provides a cle
   <li>Implement backend functionality to store responses</li>
   <li>Improve styling with CSS animations for a smoother experience</li>
 </ul>
+<br>
+<footer>
+    <p>&copy; 2025 Ken Ekweme | <a href="https://www.oteksolutions.net" target="_blank">OTek Solutions</a></p>
+</footer>
