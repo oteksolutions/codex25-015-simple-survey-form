@@ -12,3 +12,8 @@ This project is a Simple Survey Form built using HTML and CSS. It provides a cle
   <li>Styled with CSS for an intuitive user experience</li>
   <li>Focus on accessibility with proper labels and semantic HTML</li>
 </ul>
+<p><strong>TECHNOLOGIES USED</strong></p>
+<ul>
+  <li>HTML – Structure for form fields and labels</li>
+  <li>CSS – Styling, layout, and responsive design</li>
+</ul>
