@@ -25,5 +25,5 @@ This project is a Simple Survey Form built using HTML and CSS. It provides a cle
 </ul>
 <br>
 <footer>
-    <p>&copy; 2025 Ken Ekweme | <a href="https://www.oteksolutions.net" target="_blank">OTek Solutions</a></p>
+    <p>&copy; 2025 <a href="https://www.linkedin.com/in/ekweme-ken" target="_blank">Ken Ekweme</a> &#124; <a href="https://www.oteksolutions.net" target="_blank">OTek Solutions</a></p>
 </footer>
