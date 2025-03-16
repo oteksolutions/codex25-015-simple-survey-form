@@ -1,0 +1,26 @@
+/* CREDITS */
+    
+    Name: Ken Ekweme
+    Title: Web Developer, UI/UX Designer, Digital Marketing Specialist
+    Company: OTek Solutions
+    Website: https://oteksolutions.net
+    Email: info [at] oteksolutions.net
+    Whatsapp: +1 514 804 7683
+    LinkedIn: https://linkedin.com/in/ekweme-ken
+    GitHub: https://github.com/oteksolutions
+    Location: Montreal, Canada
+    
+
+/* TECHNICAL SKILLS */
+
+    Languages: CSS, HTML
+    Design: Adobe (Illustrator, Photoshop, Premiere)
+
+
+/* MISC */
+
+    Hire Me: Need a modern and responsive website? Let’s work together!
+	
+    Fellow Creatives: Let's Network! Add me on LinkedIn
+
+    Feel free to reach out if you have questions or feedback!
