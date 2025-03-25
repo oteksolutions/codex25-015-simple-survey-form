@@ -11,9 +11,9 @@
     Location: Montreal, Canada
     
 
-/* TECHNICAL SKILLS */
+/* TECH SKILLS */
 
-    Languages: CSS, HTML
+    Frontend: JavaScript, CSS, HTML
     Design: Adobe (Illustrator, Photoshop, Premiere)
 
 
