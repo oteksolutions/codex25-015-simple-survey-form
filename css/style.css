@@ -100,65 +100,41 @@ button:hover {
   background-color: #2c4560;
 }
 
-/* Footer */
-footer * {
-  margin: 0;
-  padding: 0;
-}
-
-footer {
-  display: flex; /* Enable flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 60px; /* Set a fixed height for the footer */
-  font-size: 14px;
-  background-color: #11607d; /* Footer background color */
-}
-
-footer p {
-  color: white; /* Footer text color */
-}
-
-footer a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline; /* Add hover effect */
-}
-
 /* Developer Footer */
 .developer-footer * {
   margin: 0;
-  padding: 0;
+  padding: 0; 
 }
-
+  
 .developer-footer {
-  background: #2c3e50;
-  color: #bdc3c7;
-  padding: 0.5rem;
-  text-align: center;
-  font-size: 0.8rem;
-  margin-top: auto;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+  bottom: 0;
+	width: 100%;
+	height: 2rem;
+	background-color: #2c3e50;
+	padding: 0.5rem;
 }
-
-.developer-footer a {
-  color: #bdc3c7;
-  text-decoration: none;
+  
+.developer-footer a, p {
+	color: #bdc3c7;
+	font-size: 0.8rem;
+	text-decoration: none;
 }
-
+  
 .developer-footer a:hover {
-  color: #007bff;
-  text-decoration: underline;
+	color: #007bff;
+	text-decoration: underline;
 }
-
+  
 .developer-footer a:active {
-  color: #FF4D00;
+	color: #FF4D00;
 }
 
 a[href*="humans"]{
- cursor: help;
+	cursor: help;
 }
 
 /* Responsive styles */
