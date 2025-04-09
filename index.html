@@ -3,104 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Form</title>
+    <meta name="description" content="Customer feedback survey for our services">
+    <title>Customer Feedback Survey</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Customer Feedback Survey</h1>
-            <p>We value your opinion! Please take a moment to fill out this survey.</p>
+            <h1 id="title">Customer Feedback Survey</h1>
+            <p id="description">We value your opinion! Please take a moment to fill out this survey.</p>
         </header>
 
         <main>
-            <form id="survey-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="age">Age</label>
-                    <input type="number" id="age" name="age" min="18" max="120" placeholder="Age">
-                </div>
-
-                <div class="form-group">
-                    <label>How did you hear about us?</label>
-                    <select id="source" name="source">
-                        <option value="" disabled selected>Select an option</option>
-                        <option value="social-media">Social Media</option>
-                        <option value="friend">Friend/Family</option>
-                        <option value="advertisement">Advertisement</option>
-                        <option value="search">Search Engine</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>How satisfied are you with our service?</label>
-                    <div class="radio-group">
-                        <label class="radio-label">
-                            <input type="radio" name="satisfaction" value="very-satisfied"> Very Satisfied
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="satisfaction" value="satisfied"> Satisfied
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="satisfaction" value="neutral"> Neutral
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="satisfaction" value="dissatisfied"> Dissatisfied
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="satisfaction" value="very-dissatisfied"> Very Dissatisfied
-                        </label>
+            <form id="survey-form" action="#" method="post" autocomplete="on" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-required="true" autocomplete="name" class="form-control">
+                        <span class="form-hint">Please enter your first and last name</span>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label>Which features do you like? (Check all that apply)</label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="user-interface"> User Interface
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="performance"> Performance
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="customer-support"> Customer Support
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="pricing"> Pricing
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="other"> Other (please specify)
-                        </label>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" required aria-required="true" autocomplete="email" class="form-control">
+                        <span class="form-hint">We'll never share your email with anyone else</span>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <label for="comments">Additional Comments</label>
-                    <textarea id="comments" name="comments" rows="4" placeholder="Please share any additional feedback..."></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(XXX) XXX-XXXX" pattern="^\(\d{3}\) \d{3}-\d{4}$" autocomplete="tel" class="form-control">
+                        <span class="form-hint">Optional - Format: (XXX) XXX-XXXX</span>
+                    </div>
 
-                <div class="form-group">
-                    <button type="submit" id="submit">Submit Survey</button>
+                    <div class="form-group">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="number" id="age" name="age" min="18" max="120" placeholder="Age (18+ only)" class="form-control">
+                        <span class="form-hint">Must be 18 years or older</span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Survey Questions</legend>
+                    <div class="form-group">
+                        <label for="source" class="form-label">How did you hear about us? <span class="required">*</span></label>
+                        <select id="source" name="source" required aria-required="true" class="form-control">
+                            <option value="" disabled selected>Please select an option</option>
+                            <option value="social-media">Social Media</option>
+                            <option value="friend">Friend/Family</option>
+                            <option value="advertisement">Advertisement</option>
+                            <option value="search">Search Engine</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="other-source-container" style="display: none;">
+                        <label for="other-source" class="form-label">Please specify:</label>
+                        <input type="text" id="other-source" name="other-source" placeholder="Tell us how you heard about us" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <fieldset class="sub-fieldset">
+                            <legend class="form-label">How satisfied are you with our service? <span class="required">*</span></legend>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="satisfaction" value="very-satisfied" required> Very Satisfied
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="satisfaction" value="satisfied"> Satisfied
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="satisfaction" value="neutral"> Neutral
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="satisfaction" value="dissatisfied"> Dissatisfied
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="satisfaction" value="very-dissatisfied"> Very Dissatisfied
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">How likely are you to recommend us to others?</label>
+                        <div class="rating-container">
+                            <div class="rating-scale">
+                                <span>Not likely</span>
+                                <div class="rating-numbers">
+                                    <label><input type="radio" name="recommendation" value="1"> 1</label>
+                                    <label><input type="radio" name="recommendation" value="2"> 2</label>
+                                    <label><input type="radio" name="recommendation" value="3"> 3</label>
+                                    <label><input type="radio" name="recommendation" value="4"> 4</label>
+                                    <label><input type="radio" name="recommendation" value="5"> 5</label>
+                                    <label><input type="radio" name="recommendation" value="6"> 6</label>
+                                    <label><input type="radio" name="recommendation" value="7"> 7</label>
+                                    <label><input type="radio" name="recommendation" value="8"> 8</label>
+                                    <label><input type="radio" name="recommendation" value="9"> 9</label>
+                                    <label><input type="radio" name="recommendation" value="10"> 10</label>
+                                </div>
+                                <span>Very likely</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <fieldset class="sub-fieldset">
+                            <legend class="form-label">Which features do you like? (Check all that apply)</legend>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="user-interface"> User Interface
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="performance"> Performance
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="customer-support"> Customer Support
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="pricing"> Pricing
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="features"> Product Features
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="other" id="features-other"> Other
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="form-group" id="other-features-container" style="display: none;">
+                        <label for="other-features" class="form-label">Please specify other features:</label>
+                        <input type="text" id="other-features" name="other-features" placeholder="What other features do you like?" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visit-frequency" class="form-label">How often do you use our services?</label>
+                        <select id="visit-frequency" name="visit-frequency" class="form-control">
+                            <option value="" disabled selected>Select frequency</option>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="quarterly">Quarterly</option>
+                            <option value="rarely">Rarely</option>
+                            <option value="first-time">First time user</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments" class="form-label">Additional Comments</label>
+                        <textarea id="comments" name="comments" rows="5" placeholder="Please share any additional feedback, suggestions, or concerns..." class="form-control"></textarea>
+                        <span class="form-hint">Max 500 characters</span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact Preferences</legend>
+                    <div class="form-group">
+                        <div class="checkbox-single">
+                            <input type="checkbox" id="follow-up" name="follow-up" value="yes">
+                            <label for="follow-up">I consent to being contacted about my feedback</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox-single">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                            <label for="newsletter">Subscribe to our newsletter</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button type="reset" id="reset" class="btn btn-secondary">Reset Form</button>
+                    <button type="submit" id="submit" class="btn btn-primary">Submit Survey</button>
                 </div>
             </form>
         </main>
-		</div>
-	
-  <!-- Web Design and Web Development by Ken Ekweme [OTek Solutions]. More info: /humans.txt -->
-	<footer class="developer-footer">
-		<p>Web Project by <a href="https://www.linkedin.com/in/ekweme-ken" target="_blank" rel="noopener noreferrer nofollow" title="Web Designer &amp; Developer">Ken Ekweme</a> &bull; <a href="https://www.oteksolutions.net" target="_blank" rel="noopener noreferrer nofollow" title="Designed and Developed by OTek Solutions">OTek Solutions</a> <a href="/humans.txt" style="font-size: 0.65rem;" target="_blank" title="Credits"><strong>&#x24D8;</strong></a></p>
-	</footer>
+
+        <footer class="survey-footer">
+            <p>Thank you for taking the time to provide your feedback!</p>
+            <p>Your input helps us improve our services.</p>
+        </footer>
+    </div>
     
-    
+    <footer class="developer-footer">
+        <p>Web Project by <a href="https://www.linkedin.com/in/ekweme-ken" target="_blank" rel="noopener noreferrer nofollow" title="Web Designer &amp; Developer">Ken Ekweme</a> &bull; <a href="https://www.oteksolutions.net" target="_blank" rel="noopener noreferrer nofollow" title="Designed and Developed by OTek Solutions">OTek Solutions</a> <a href="/humans.txt" style="font-size: 0.65rem;" target="_blank" title="Credits"><strong>&#x24D8;</strong></a></p>
+    </footer>
+
+    <script src="js/survey-form.js"></script>
 </body>
 </html>
