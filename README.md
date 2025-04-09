@@ -16,10 +16,10 @@ This project is a Survey Form built using HTML, CSS and JavaScript. It provides 
 <ul>
   <li>HTML – Structure for form fields and labels</li>
   <li>CSS – Styling, layout, and responsive design</li>
+  <li>JavaScript – Form validation and interactivity</li>
 </ul>
 <p><strong>FUTURE IMPROVEMENTS</strong></p>
 <ul>
-  <li>Add JavaScript for form validation and interactivity</li>
   <li>Implement backend functionality to store responses</li>
   <li>Improve styling with CSS animations for a smoother experience</li>
 </ul>
